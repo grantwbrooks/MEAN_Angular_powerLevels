@@ -6,15 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./power-component.component.css']
 })
 export class PowerComponentComponent implements OnInit {
-  power = 100;
+  power: number;
+  power2: number;
   constructor() { }
   
-  adjustPower(x) {
-    // this.power = x;
+  adjustPower() {
+    this.power2 = this.power;
     console.log(this.power);
   }
 
   ngOnInit() {
+    this.power = 10;
+    this.power2 = this.power;
   }
 
 }
